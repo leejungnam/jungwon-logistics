@@ -849,37 +849,8 @@
         }
         
         .coverage-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-        
-        .coverage-map {
-            background: var(--neutral-light);
-            border-radius: 20px;
-            padding: 60px;
-            text-align: center;
-            min-height: 500px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .coverage-map:before {
-            content: '🗺️';
-            font-size: 200px;
-            position: absolute;
-            opacity: 0.1;
-        }
-        
-        .map-icon {
-            font-size: 180px;
-            opacity: 0.6;
-            position: relative;
-            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
         }
         
         .coverage-list {
@@ -1836,10 +1807,6 @@
             </div>
             
             <div class="coverage-container">
-                <div class="coverage-map">
-                    <div class="map-icon">🇰🇷</div>
-                </div>
-                
                 <div class="coverage-list">
                     <div class="coverage-item">
                         <div class="coverage-region">수도권</div>
