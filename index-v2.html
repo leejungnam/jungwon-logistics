@@ -1,0 +1,1871 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정원유통 | 프랜차이즈 물류의 새로운 기준</title>
+    <meta name="description" content="14년 노하우의 프랜차이즈 물류 전문 기업. 전국 네트워크 기반의 정확하고 신속한 물류 서비스.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --accent-blue: #0066FF;
+            --accent-green: #00C896;
+            --text-dark: #1a1a1a;
+            --text-gray: #666666;
+            --text-light: #999999;
+            --bg-white: #FFFFFF;
+            --bg-light: #F8F9FA;
+            --border-color: #E5E5E5;
+            
+            --font-en: 'Inter', sans-serif;
+            --font-kr: 'Noto Sans KR', sans-serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--font-kr);
+            color: var(--text-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+            background: var(--bg-white);
+            font-weight: 400;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-family: var(--font-en);
+            font-weight: 700;
+            font-size: 20px;
+            color: var(--text-dark);
+            letter-spacing: -0.5px;
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+            align-items: center;
+        }
+        
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-gray);
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-menu a:hover {
+            color: var(--text-dark);
+        }
+        
+        .nav-cta {
+            background: var(--accent-blue);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-cta:hover {
+            background: #0052CC;
+            transform: translateY(-1px);
+        }
+        
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+        
+        .menu-toggle span {
+            width: 24px;
+            height: 2px;
+            background: var(--text-dark);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+            background: var(--bg-white);
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .hero-label {
+            font-family: var(--font-en);
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--accent-blue);
+            margin-bottom: 24px;
+        }
+        
+        .hero h1 {
+            font-size: 64px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            color: var(--text-dark);
+            letter-spacing: -2px;
+        }
+        
+        .hero-subtitle {
+            font-size: 20px;
+            font-weight: 400;
+            color: var(--text-gray);
+            margin-bottom: 48px;
+            line-height: 1.6;
+        }
+        
+        .hero-stats {
+            display: flex;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+        
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .stat-number {
+            font-family: var(--font-en);
+            font-size: 40px;
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-gray);
+            font-weight: 500;
+        }
+        
+        .hero-cta-group {
+            display: flex;
+            gap: 16px;
+        }
+        
+        .btn-primary, .btn-secondary {
+            padding: 16px 32px;
+            font-size: 15px;
+            font-weight: 600;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .btn-primary {
+            background: var(--accent-blue);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #0052CC;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0, 102, 255, 0.2);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-dark);
+            border: 1px solid var(--border-color);
+        }
+        
+        .btn-secondary:hover {
+            border-color: var(--text-dark);
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 120px 0;
+        }
+        
+        .section-header {
+            max-width: 700px;
+            margin-bottom: 80px;
+        }
+        
+        .section-label {
+            font-family: var(--font-en);
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--accent-blue);
+            margin-bottom: 16px;
+        }
+        
+        .section-title {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+        
+        .section-description {
+            font-size: 18px;
+            color: var(--text-gray);
+            line-height: 1.7;
+        }
+        
+        /* About Section */
+        .about {
+            background: var(--bg-light);
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+        
+        .about-content p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--text-gray);
+            margin-bottom: 24px;
+        }
+        
+        .core-values {
+            display: grid;
+            gap: 24px;
+            margin-top: 40px;
+        }
+        
+        .value-item {
+            background: white;
+            padding: 32px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+        
+        .value-item:hover {
+            border-color: var(--accent-blue);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        
+        .value-item h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+        }
+        
+        .value-item p {
+            font-size: 15px;
+            color: var(--text-gray);
+            margin: 0;
+        }
+        
+        .company-info {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .info-grid {
+            display: grid;
+            gap: 20px;
+        }
+        
+        .info-item {
+            display: flex;
+            gap: 16px;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .info-item:last-child {
+            border-bottom: none;
+        }
+        
+        .info-item strong {
+            font-weight: 600;
+            min-width: 80px;
+            color: var(--text-dark);
+        }
+        
+        .info-item span {
+            color: var(--text-gray);
+        }
+        
+        /* Services Section */
+        .services {
+            background: var(--bg-white);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        
+        .service-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 40px;
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            border-color: var(--accent-blue);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            transform: translateY(-4px);
+        }
+        
+        .service-icon {
+            font-size: 32px;
+            margin-bottom: 24px;
+        }
+        
+        .service-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+        }
+        
+        .service-card .service-desc {
+            font-size: 14px;
+            color: var(--text-gray);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .service-features {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .service-features li {
+            padding: 8px 0;
+            font-size: 13px;
+            color: var(--text-gray);
+            position: relative;
+            padding-left: 16px;
+        }
+        
+        .service-features li:before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--accent-blue);
+        }
+        
+        /* Advantages Section */
+        .advantages {
+            background: var(--bg-light);
+        }
+        
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+        
+        .advantage-card {
+            background: white;
+            padding: 48px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .advantage-number {
+            font-family: var(--font-en);
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--accent-blue);
+            margin-bottom: 16px;
+        }
+        
+        .advantage-card h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--text-dark);
+        }
+        
+        .advantage-card p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--text-gray);
+            margin-bottom: 24px;
+        }
+        
+        .advantage-list {
+            list-style: none;
+            display: grid;
+            gap: 12px;
+        }
+        
+        .advantage-list li {
+            font-size: 14px;
+            color: var(--text-gray);
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .advantage-list li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent-green);
+            font-weight: 700;
+        }
+        
+        /* Partners Section */
+        .partners {
+            background: var(--bg-white);
+        }
+        
+        .partner-showcase {
+            background: var(--bg-light);
+            border-radius: 12px;
+            padding: 64px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+        
+        .partner-logo {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 24px;
+        }
+        
+        .partner-description {
+            font-size: 18px;
+            color: var(--text-gray);
+            margin-bottom: 48px;
+            line-height: 1.7;
+        }
+        
+        .partner-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+        
+        .partner-stat-item {
+            text-align: center;
+        }
+        
+        .partner-stat-number {
+            font-family: var(--font-en);
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+        
+        .partner-stat-label {
+            font-size: 14px;
+            color: var(--text-gray);
+        }
+        
+        /* Process Section */
+        .process {
+            background: var(--bg-light);
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+        }
+        
+        .process-step {
+            text-align: left;
+        }
+        
+        .step-number {
+            font-family: var(--font-en);
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--accent-blue);
+            margin-bottom: 16px;
+        }
+        
+        .process-step h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+        }
+        
+        .process-step p {
+            font-size: 14px;
+            color: var(--text-gray);
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+        
+        .step-details {
+            list-style: none;
+            font-size: 13px;
+            color: var(--text-light);
+        }
+        
+        .step-details li {
+            padding: 4px 0;
+        }
+        
+        /* Facilities Section */
+        .facilities {
+            background: var(--bg-white);
+        }
+        
+        .facilities-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        
+        .facility-card {
+            background: var(--bg-light);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .facility-card:hover {
+            border-color: var(--accent-blue);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+        
+        .facility-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 64px;
+        }
+        
+        .facility-content {
+            padding: 32px;
+            background: white;
+        }
+        
+        .facility-content h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+        
+        .facility-specs {
+            list-style: none;
+        }
+        
+        .facility-specs li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 14px;
+            color: var(--text-gray);
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .facility-specs li:last-child {
+            border-bottom: none;
+        }
+        
+        .facility-specs strong {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+        
+        /* Coverage Section */
+        .coverage {
+            background: var(--bg-light);
+        }
+        
+        .coverage-list {
+            display: grid;
+            gap: 16px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .coverage-item {
+            background: white;
+            padding: 24px 32px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+        
+        .coverage-item:hover {
+            border-color: var(--accent-blue);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        
+        .coverage-region {
+            font-weight: 600;
+            font-size: 16px;
+            color: var(--text-dark);
+        }
+        
+        .delivery-time {
+            font-size: 14px;
+            color: var(--accent-blue);
+            font-weight: 600;
+            font-family: var(--font-en);
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: var(--bg-white);
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+        
+        .contact-info h3 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text-dark);
+        }
+        
+        .contact-info p {
+            font-size: 16px;
+            margin-bottom: 40px;
+            color: var(--text-gray);
+            line-height: 1.7;
+        }
+        
+        .contact-methods {
+            display: grid;
+            gap: 24px;
+        }
+        
+        .contact-method {
+            display: flex;
+            gap: 16px;
+            align-items: start;
+        }
+        
+        .contact-method-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--bg-light);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+        
+        .contact-method-content strong {
+            display: block;
+            font-size: 13px;
+            color: var(--text-light);
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+        
+        .contact-method-content span {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        
+        .contact-form {
+            background: var(--bg-light);
+            padding: 48px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+        
+        .form-group {
+            margin-bottom: 16px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+            font-size: 13px;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: var(--font-kr);
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .form-checkbox {
+            display: flex;
+            gap: 8px;
+            align-items: start;
+            margin: 24px 0;
+        }
+        
+        .form-checkbox input {
+            margin-top: 4px;
+        }
+        
+        .form-checkbox label {
+            font-size: 12px;
+            color: var(--text-gray);
+            line-height: 1.5;
+        }
+        
+        .form-submit {
+            width: 100%;
+            padding: 16px;
+            background: var(--accent-blue);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .form-submit:hover {
+            background: #0052CC;
+            transform: translateY(-1px);
+        }
+        
+        /* Careers Section */
+        .careers {
+            background: var(--bg-light);
+            padding: 80px 0;
+        }
+        
+        .careers-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .careers-content h3 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+        
+        .careers-content p {
+            font-size: 16px;
+            color: var(--text-gray);
+            margin-bottom: 48px;
+        }
+        
+        .careers-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+        
+        .career-card {
+            background: white;
+            padding: 32px;
+            border-radius: 12px;
+            text-align: left;
+            border: 1px solid var(--border-color);
+        }
+        
+        .career-card h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--text-dark);
+        }
+        
+        .career-card ul {
+            list-style: none;
+            font-size: 13px;
+            color: var(--text-gray);
+        }
+        
+        .career-card li {
+            padding: 6px 0;
+            padding-left: 16px;
+            position: relative;
+        }
+        
+        .career-card li:before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--accent-blue);
+        }
+        
+        .careers-cta {
+            font-size: 15px;
+            color: var(--text-gray);
+        }
+        
+        .careers-cta strong {
+            color: var(--accent-blue);
+            font-weight: 600;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 80px 0 40px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+        
+        .footer-brand h3 {
+            font-family: var(--font-en);
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: white;
+        }
+        
+        .footer-brand p {
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+        
+        .footer-company-info {
+            font-size: 13px;
+            line-height: 1.8;
+        }
+        
+        .footer-section h4 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: white;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section ul li a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section ul li a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+        }
+        
+        .footer-legal {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .footer-legal a {
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-legal a:hover {
+            color: white;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .container {
+                padding: 0 32px;
+            }
+            
+            nav {
+                padding: 20px 32px;
+            }
+            
+            .hero h1 {
+                font-size: 48px;
+            }
+            
+            .hero-stats {
+                flex-wrap: wrap;
+            }
+            
+            .about-grid,
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+            
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .advantages-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .process-steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+            
+            nav {
+                padding: 16px 20px;
+            }
+            
+            .nav-menu {
+                display: none;
+            }
+            
+            .menu-toggle {
+                display: flex;
+            }
+            
+            .hero {
+                padding-top: 80px;
+                min-height: auto;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero-subtitle {
+                font-size: 16px;
+            }
+            
+            .hero-stats {
+                gap: 24px;
+            }
+            
+            .stat-number {
+                font-size: 32px;
+            }
+            
+            .hero-cta-group {
+                flex-direction: column;
+            }
+            
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                text-align: center;
+            }
+            
+            section {
+                padding: 80px 0;
+            }
+            
+            .section-title {
+                font-size: 32px;
+            }
+            
+            .services-grid,
+            .facilities-grid,
+            .careers-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-form {
+                padding: 32px 24px;
+            }
+            
+            .partner-showcase {
+                padding: 40px 24px;
+            }
+            
+            .partner-logo {
+                font-size: 28px;
+            }
+            
+            .partner-description {
+                font-size: 15px;
+            }
+            
+            .partner-stats {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            
+            .info-item {
+                flex-direction: column;
+                gap: 4px;
+            }
+            
+            .info-item strong {
+                min-width: auto;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                gap: 16px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">JUNGWON</div>
+            <ul class="nav-menu">
+                <li><a href="#about">회사소개</a></li>
+                <li><a href="#services">서비스</a></li>
+                <li><a href="#advantages">강점</a></li>
+                <li><a href="#partners">파트너</a></li>
+                <li><a href="#contact">문의하기</a></li>
+            </ul>
+            <button class="nav-cta" onclick="location.href='#contact'">견적 문의</button>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-label">Franchise Logistics Partner</div>
+                <h1>프랜차이즈 물류의<br>새로운 기준</h1>
+                <p class="hero-subtitle">전국 네트워크 기반의 정확하고 신속한 물류 서비스로 비즈니스의 성장을 지원합니다</p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">14</div>
+                        <div class="stat-label">년 노하우</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">10</div>
+                        <div class="stat-label">보유 차량</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">온도 관리</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">협력 매장</div>
+                    </div>
+                </div>
+                
+                <div class="hero-cta-group">
+                    <a href="#contact" class="btn-primary">견적 문의하기</a>
+                    <a href="#services" class="btn-secondary">서비스 알아보기</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">About Us</div>
+                <h2 class="section-title">작지만 강한 회사,<br>좁지만 깊은 전문성</h2>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-content">
+                    <p>2013년 설립 이래, 정원유통은 프랜차이즈 물류 전문 기업으로 성장해왔습니다. 14년간 축적된 노하우와 체계적인 시스템으로 고객과 함께 성장하는 파트너십을 만들어갑니다.</p>
+                    <p>대형 프랜차이즈부터 소규모 브랜드까지, 우리는 모든 고객에게 동일한 수준의 전문성과 신뢰를 제공합니다.</p>
+                    
+                    <div class="core-values">
+                        <div class="value-item">
+                            <h4>정확성</h4>
+                            <p>재고 관리부터 배송까지 오차 없는 시스템으로 완벽한 물류를 실현합니다</p>
+                        </div>
+                        <div class="value-item">
+                            <h4>신속성</h4>
+                            <p>전국 어디든 최적 배송 루트로 빠르고 안전하게 배송합니다</p>
+                        </div>
+                        <div class="value-item">
+                            <h4>신뢰성</h4>
+                            <p>14년 노하우로 검증된 안정적인 서비스를 제공합니다</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="company-info">
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <strong>설립</strong>
+                                <span>2013년 5월</span>
+                            </div>
+                            <div class="info-item">
+                                <strong>대표</strong>
+                                <span>오재연</span>
+                            </div>
+                            <div class="info-item">
+                                <strong>주소</strong>
+                                <span>경기도 하남시 서하남로47번길 230</span>
+                            </div>
+                            <div class="info-item">
+                                <strong>사업분야</strong>
+                                <span>프랜차이즈 물류 전문</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Services</div>
+                <h2 class="section-title">프랜차이즈를 위한<br>토탈 물류 솔루션</h2>
+                <p class="section-description">보관부터 배송까지, 통합 물류 서비스로 비즈니스의 효율을 극대화합니다</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🏭</div>
+                    <h3>보관 서비스</h3>
+                    <p class="service-desc">일반/냉동/냉장 통합 보관 시설 운영</p>
+                    <ul class="service-features">
+                        <li>다양한 온도대 관리</li>
+                        <li>체계적인 입출고 시스템</li>
+                        <li>24시간 CCTV 모니터링</li>
+                        <li>선입선출(FIFO) 재고 관리</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🚚</div>
+                    <h3>배송 서비스</h3>
+                    <p class="service-desc">전국 단위 신속 배송 네트워크</p>
+                    <ul class="service-features">
+                        <li>전국 배송 가능 (제주 포함)</li>
+                        <li>온도별 차량 구분 운영</li>
+                        <li>정시 배송률 관리</li>
+                        <li>실시간 배송 현황 공유</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>재고 관리</h3>
+                    <p class="service-desc">실시간 재고 현황 및 입출고 관리</p>
+                    <ul class="service-features">
+                        <li>실시간 재고 현황 제공</li>
+                        <li>유통기한 알림 서비스</li>
+                        <li>월/주/일 리포트 제공</li>
+                        <li>발주 예측 데이터 지원</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">📦</div>
+                    <h3>포장/가공</h3>
+                    <p class="service-desc">프랜차이즈 특성에 맞춘 맞춤 포장</p>
+                    <ul class="service-features">
+                        <li>소분/재포장 서비스</li>
+                        <li>라벨링 및 스티커 부착</li>
+                        <li>세트 구성 작업</li>
+                        <li>프로모션 상품 구성</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🔍</div>
+                    <h3>품질 관리</h3>
+                    <p class="service-desc">입고부터 출고까지 철저한 품질 검수</p>
+                    <ul class="service-features">
+                        <li>입고 시 전수 검품</li>
+                        <li>온도 이탈 모니터링</li>
+                        <li>파손/불량 실시간 보고</li>
+                        <li>품질 보증서 발급</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">📈</div>
+                    <h3>물류 컨설팅</h3>
+                    <p class="service-desc">물류 최적화를 위한 전문 컨설팅</p>
+                    <ul class="service-features">
+                        <li>배송 루트 최적화</li>
+                        <li>재고 회전율 분석</li>
+                        <li>물류 비용 절감 제안</li>
+                        <li>시즌별 물량 예측</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section id="advantages" class="advantages">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Why Choose Us</div>
+                <h2 class="section-title">정원유통을 선택해야 하는 이유</h2>
+            </div>
+            
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <div class="advantage-number">01</div>
+                    <h3>프랜차이즈 물류 전문성</h3>
+                    <p>대형 프랜차이즈 '짬뽕타임'의 공식 물류 파트너로서, 14년간 쌓아온 프랜차이즈 특화 운영 노하우를 보유하고 있습니다.</p>
+                    <ul class="advantage-list">
+                        <li>짬뽕타임 100여 개 매장 물류 파트너</li>
+                        <li>다점포 동시 배송 시스템 구축</li>
+                        <li>표준화된 배송 프로세스</li>
+                        <li>프랜차이즈 특화 14년 노하우</li>
+                    </ul>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-number">02</div>
+                    <h3>통합 온도 관리 시스템</h3>
+                    <p>일반/냉장/냉동 창고를 통합 운영하여 다양한 온도대의 상품을 한 번에 처리할 수 있습니다.</p>
+                    <ul class="advantage-list">
+                        <li>일반/냉장/냉동 창고 통합 운영</li>
+                        <li>혼적 배송으로 비용 절감 효과</li>
+                        <li>온도 이탈 없는 안전한 운송</li>
+                        <li>콜드체인 완벽 유지</li>
+                    </ul>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-number">03</div>
+                    <h3>전국 네트워크 커버리지</h3>
+                    <p>수도권부터 제주도까지, 전국 어디든 안정적이고 신속한 배송 서비스를 제공합니다.</p>
+                    <ul class="advantage-list">
+                        <li>수도권 당일 배송</li>
+                        <li>지방 익일 배송 가능</li>
+                        <li>제주도 정기 배송 운영</li>
+                        <li>긴급 배송 대응 가능</li>
+                    </ul>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-number">04</div>
+                    <h3>유연한 맞춤형 서비스</h3>
+                    <p>소규모 프랜차이즈부터 대형 브랜드까지, 고객의 니즈에 맞춘 유연한 물류 솔루션을 제공합니다.</p>
+                    <ul class="advantage-list">
+                        <li>소규모 프랜차이즈도 환영</li>
+                        <li>점포별 차등 배송 가능</li>
+                        <li>시즌/프로모션 대응 탄력적</li>
+                        <li>계약 조건 협의 가능</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section id="partners" class="partners">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Our Partners</div>
+                <h2 class="section-title">함께 성장하는 파트너</h2>
+                <p class="section-description">신뢰를 바탕으로 고객과 함께 성장합니다</p>
+            </div>
+            
+            <div class="partner-showcase">
+                <div class="partner-logo">🍜 짬뽕타임</div>
+                <p class="partner-description">전국 100여 개 매장의 신선한 식자재를 책임지는 파트너로서, 매일 정확하고 신속한 물류 서비스를 제공하고 있습니다.</p>
+                
+                <div class="partner-stats">
+                    <div class="partner-stat-item">
+                        <div class="partner-stat-number">100+</div>
+                        <div class="partner-stat-label">협력 매장</div>
+                    </div>
+                    <div class="partner-stat-item">
+                        <div class="partner-stat-number">Daily</div>
+                        <div class="partner-stat-label">정기 배송</div>
+                    </div>
+                    <div class="partner-stat-item">
+                        <div class="partner-stat-number">14</div>
+                        <div class="partner-stat-label">파트너십 년수</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="process">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Process</div>
+                <h2 class="section-title">간편한 4단계 물류 프로세스</h2>
+                <p class="section-description">상담부터 배송까지, 체계적인 프로세스로 안심하세요</p>
+            </div>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">STEP 01</div>
+                    <h4>상담 및 견적</h4>
+                    <p>고객의 니즈를 파악하고 맞춤 견적을 제공합니다</p>
+                    <ul class="step-details">
+                        <li>전화/이메일 문의</li>
+                        <li>물동량 파악</li>
+                        <li>맞춤 견적 제공</li>
+                    </ul>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">STEP 02</div>
+                    <h4>계약 및 입고</h4>
+                    <p>계약 체결 후 상품을 안전하게 입고합니다</p>
+                    <ul class="step-details">
+                        <li>계약서 작성</li>
+                        <li>상품 입고 검수</li>
+                        <li>시스템 등록</li>
+                    </ul>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">STEP 03</div>
+                    <h4>보관 및 관리</h4>
+                    <p>온도별 최적 보관과 철저한 재고 관리를 진행합니다</p>
+                    <ul class="step-details">
+                        <li>온도별 보관</li>
+                        <li>실시간 재고 관리</li>
+                        <li>정기 리포트 제공</li>
+                    </ul>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">STEP 04</div>
+                    <h4>출고 및 배송</h4>
+                    <p>주문에 따라 신속하게 출고하고 배송합니다</p>
+                    <ul class="step-details">
+                        <li>주문 접수 피킹</li>
+                        <li>배송지별 포장</li>
+                        <li>전국 배송 진행</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section class="facilities">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Infrastructure</div>
+                <h2 class="section-title">보유 시설 및 인프라</h2>
+                <p class="section-description">최적의 물류 환경을 위한 체계적인 인프라를 갖추고 있습니다</p>
+            </div>
+            
+            <div class="facilities-grid">
+                <div class="facility-card">
+                    <div class="facility-image">🚛</div>
+                    <div class="facility-content">
+                        <h3>보유 차량</h3>
+                        <ul class="facility-specs">
+                            <li><strong>총 보유</strong> 10대</li>
+                            <li><strong>냉동 차량</strong> -18°C 유지</li>
+                            <li><strong>냉장 차량</strong> 0~10°C 유지</li>
+                            <li><strong>일반 차량</strong> 상온 배송</li>
+                            <li><strong>관리</strong> GPS 추적 시스템</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="facility-card">
+                    <div class="facility-image">🏢</div>
+                    <div class="facility-content">
+                        <h3>물류 창고</h3>
+                        <ul class="facility-specs">
+                            <li><strong>위치</strong> 경기도 하남시</li>
+                            <li><strong>일반 창고</strong> 상온 보관</li>
+                            <li><strong>냉장 창고</strong> 0~10°C</li>
+                            <li><strong>냉동 창고</strong> -18°C 이하</li>
+                            <li><strong>보안</strong> 24시간 CCTV</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="facility-card">
+                    <div class="facility-image">⚙️</div>
+                    <div class="facility-content">
+                        <h3>인프라 특징</h3>
+                        <ul class="facility-specs">
+                            <li><strong>접근성</strong> 고속도로 인접</li>
+                            <li><strong>진입</strong> 대형 화물차 가능</li>
+                            <li><strong>작업 공간</strong> 넓은 상하차장</li>
+                            <li><strong>안전</strong> 소방 시설 완비</li>
+                            <li><strong>모니터링</strong> 온도 실시간 관리</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coverage Section -->
+    <section class="coverage">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Service Area</div>
+                <h2 class="section-title">전국 서비스 지역</h2>
+                <p class="section-description">수도권부터 제주도까지, 전국 어디든 배송합니다</p>
+            </div>
+            
+            <div class="coverage-list">
+                <div class="coverage-item">
+                    <div class="coverage-region">수도권</div>
+                    <div class="delivery-time">당일 배송</div>
+                </div>
+                <div class="coverage-item">
+                    <div class="coverage-region">충청권</div>
+                    <div class="delivery-time">당일~익일</div>
+                </div>
+                <div class="coverage-item">
+                    <div class="coverage-region">영남권</div>
+                    <div class="delivery-time">익일 배송</div>
+                </div>
+                <div class="coverage-item">
+                    <div class="coverage-region">호남권</div>
+                    <div class="delivery-time">익일 배송</div>
+                </div>
+                <div class="coverage-item">
+                    <div class="coverage-region">강원권</div>
+                    <div class="delivery-time">익일 배송</div>
+                </div>
+                <div class="coverage-item">
+                    <div class="coverage-region">제주도</div>
+                    <div class="delivery-time">2~3일 소요</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Contact Us</div>
+                <h2 class="section-title">지금 바로 맞춤 견적을 받아보세요</h2>
+                <p class="section-description">24시간 이내 답변 드립니다</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>문의하기</h3>
+                    <p>프랜차이즈 물류에 대한 고민이 있으시다면 언제든 연락주세요. 전문 상담원이 친절하게 안내해드립니다.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-method-icon">📞</div>
+                            <div class="contact-method-content">
+                                <strong>전화 문의</strong>
+                                <span>02-XXXX-XXXX</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-method-icon">✉️</div>
+                            <div class="contact-method-content">
+                                <strong>이메일</strong>
+                                <span>info@jungwon.com</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-method-icon">🕐</div>
+                            <div class="contact-method-content">
+                                <strong>운영 시간</strong>
+                                <span>평일 09:00 - 18:00</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-method-icon">📍</div>
+                            <div class="contact-method-content">
+                                <strong>주소</strong>
+                                <span>경기도 하남시 서하남로47번길 230</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="company">회사명 *</label>
+                                <input type="text" id="company" name="company" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="name">담당자명 *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">연락처 *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">이메일 *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="service">서비스 종류</label>
+                                <select id="service" name="service">
+                                    <option value="">선택하세요</option>
+                                    <option value="storage">보관</option>
+                                    <option value="delivery">배송</option>
+                                    <option value="inventory">재고관리</option>
+                                    <option value="integrated">통합 솔루션</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="type">취급 품목</label>
+                                <select id="type" name="type">
+                                    <option value="">선택하세요</option>
+                                    <option value="frozen">냉동</option>
+                                    <option value="chilled">냉장</option>
+                                    <option value="normal">상온</option>
+                                    <option value="mixed">혼합</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">문의 내용</label>
+                            <textarea id="message" name="message" placeholder="예상 물동량, 배송 지역, 기타 문의사항을 자유롭게 작성해주세요"></textarea>
+                        </div>
+                        
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="privacy" name="privacy" required>
+                            <label for="privacy">개인정보 수집 및 이용에 동의합니다. 수집된 정보는 견적 제공 및 상담 목적으로만 사용됩니다.</label>
+                        </div>
+                        
+                        <button type="submit" class="form-submit">견적 문의하기</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Careers Section -->
+    <section class="careers">
+        <div class="container">
+            <div class="careers-content">
+                <div class="section-label">Join Our Team</div>
+                <h3>함께 성장할 인재를 찾습니다</h3>
+                <p>정원유통과 함께 프랜차이즈 물류의 미래를 만들어갈 열정적인 인재를 모집합니다</p>
+                
+                <div class="careers-grid">
+                    <div class="career-card">
+                        <h4>배송 기사</h4>
+                        <ul>
+                            <li>4대 보험 완비</li>
+                            <li>주 5일 근무</li>
+                            <li>퇴직금 지급</li>
+                            <li>우수사원 포상</li>
+                        </ul>
+                    </div>
+                    <div class="career-card">
+                        <h4>물류 관리</h4>
+                        <ul>
+                            <li>4대 보험 완비</li>
+                            <li>주 5일 근무</li>
+                            <li>퇴직금 지급</li>
+                            <li>교육 지원</li>
+                        </ul>
+                    </div>
+                    <div class="career-card">
+                        <h4>영업/CS</h4>
+                        <ul>
+                            <li>4대 보험 완비</li>
+                            <li>주 5일 근무</li>
+                            <li>퇴직금 지급</li>
+                            <li>성과급 지급</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <p class="careers-cta">상시 채용 중 · 이력서 제출: <strong>recruit@jungwon.com</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>JUNGWON</h3>
+                    <p>프랜차이즈 물류 전문 기업으로서 14년간 쌓아온 노하우와 신뢰를 바탕으로 고객과 함께 성장합니다.</p>
+                    <div class="footer-company-info">
+                        <p>(주)정원유통 · 대표: 오재연<br>
+                        사업자등록번호: XXX-XX-XXXXX<br>
+                        경기도 하남시 서하남로47번길 230<br>
+                        Tel: 02-XXXX-XXXX · Email: info@jungwon.com</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>빠른 링크</h4>
+                    <ul>
+                        <li><a href="#about">회사소개</a></li>
+                        <li><a href="#services">서비스</a></li>
+                        <li><a href="#advantages">강점</a></li>
+                        <li><a href="#partners">파트너</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>고객지원</h4>
+                    <ul>
+                        <li><a href="#contact">문의하기</a></li>
+                        <li><a href="#process">이용 절차</a></li>
+                        <li><a href="#contact">견적 요청</a></li>
+                        <li><a href="#">자주 묻는 질문</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>채용</h4>
+                    <ul>
+                        <li><a href="#careers">채용 정보</a></li>
+                        <li><a href="#">인재상</a></li>
+                        <li><a href="#">복리후생</a></li>
+                        <li><a href="#">입사 지원</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div>© 2025 정원유통. All rights reserved.</div>
+                <div class="footer-legal">
+                    <a href="#">개인정보처리방침</a>
+                    <a href="#">이용약관</a>
+                    <a href="#">이메일무단수집거부</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.05)';
+            } else {
+                header.style.boxShadow = 'none';
+            }
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            if (!data.company || !data.name || !data.phone || !data.email) {
+                alert('필수 항목을 모두 입력해주세요.');
+                return;
+            }
+            
+            if (!data.privacy) {
+                alert('개인정보 수집 및 이용에 동의해주세요.');
+                return;
+            }
+            
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(data.email)) {
+                alert('올바른 이메일 주소를 입력해주세요.');
+                return;
+            }
+            
+            alert('견적 문의가 접수되었습니다.\n24시간 이내에 연락드리겠습니다.\n감사합니다!');
+            this.reset();
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        if (menuToggle) {
+            menuToggle.addEventListener('click', function() {
+                navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+            });
+        }
+    </script>
+</body>
+</html>
